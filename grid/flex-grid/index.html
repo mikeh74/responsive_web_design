@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ol,
+        ul {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .flex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            /* gap: 1rem; */
+        }
+
+        .flex-grid-item {
+            flex: 1 1 24%;
+            background: #f4f4f4;
+            border: 1px solid #ccc;
+        }
+
+        .flex-grid-item-content {
+            padding: 1rem;
+        }
+
+        .flex-grid--var1 .flex-grid-item {
+            min-width: 18rem;
+        }
+    </style>
+
+    <title>Flexbox Grid layouts</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Example of Grid layouts using flexbox</h1>
+
+        <h2>Basic Grid</h2>
+
+        <ul class="flex-grid">
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit harum illum corporis natus. Aut
+                        repellat sunt eos, expedita incidunt rem, autem at mollitia blanditiis iste iure et a quod
+                        consectetur.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Cum sequi rerum velit! Asperiores ut id atque suscipit ducimus voluptate, ad tenetur labore eum
+                        at. Ipsa nostrum, quam sed fugiat ipsum adipisci ullam tenetur voluptate maxime ipsam facere
+                        quisquam.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Ea ad facere officiis. Repellat aperiam beatae culpa iusto provident quia earum optio corrupti
+                        corporis fugiat neque voluptas tempora reprehenderit, expedita sequi non illo repellendus esse
+                        quidem praesentium nulla. Sint.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Laborum, a libero? Dignissimos asperiores maxime mollitia dicta illum doloremque iste debitis
+                        ipsa nihil, aspernatur at dolores! Corporis non quibusdam qui cum. Corporis modi officia
+                        officiis possimus dolor. Maxime, possimus.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Velit, ea eligendi consequuntur maxime numquam totam suscipit libero assumenda, reiciendis iure
+                        temporibus aut atque laborum fuga iusto asperiores maiores odio! Nulla voluptatum esse quas quis
+                        adipisci quo. Error, placeat.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Libero reiciendis porro fugiat minus nihil inventore iusto corrupti sed minima, quasi officia
+                        voluptas similique! Autem animi impedit obcaecati consequuntur nobis dolorum, laborum, aliquam
+                        exercitationem quas porro hic quod cumque.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Itaque ad necessitatibus rem nobis maxime officiis illum asperiores soluta perferendis sunt
+                        autem, consequatur beatae, mollitia neque. Ratione quod dicta facere aliquid illum fugiat et
+                        corporis obcaecati, sunt fuga fugit!</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Quo delectus unde velit temporibus nam ipsam incidunt, rerum neque magnam quas. Assumenda ratione
+                        tempore fugiat cum similique pariatur hic numquam amet dolorem perspiciatis magni, qui possimus
+                        autem culpa. Pariatur!</p>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Added min-width</h2>
+
+        <ul class="flex-grid flex-grid--var1">
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit harum illum corporis natus. Aut
+                        repellat sunt eos, expedita incidunt rem, autem at mollitia blanditiis iste iure et a quod
+                        consectetur.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Cum sequi rerum velit! Asperiores ut id atque suscipit ducimus voluptate, ad tenetur labore eum
+                        at. Ipsa nostrum, quam sed fugiat ipsum adipisci ullam tenetur voluptate maxime ipsam facere
+                        quisquam.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Ea ad facere officiis. Repellat aperiam beatae culpa iusto provident quia earum optio corrupti
+                        corporis fugiat neque voluptas tempora reprehenderit, expedita sequi non illo repellendus esse
+                        quidem praesentium nulla. Sint.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Laborum, a libero? Dignissimos asperiores maxime mollitia dicta illum doloremque iste debitis
+                        ipsa nihil, aspernatur at dolores! Corporis non quibusdam qui cum. Corporis modi officia
+                        officiis possimus dolor. Maxime, possimus.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Velit, ea eligendi consequuntur maxime numquam totam suscipit libero assumenda, reiciendis iure
+                        temporibus aut atque laborum fuga iusto asperiores maiores odio! Nulla voluptatum esse quas quis
+                        adipisci quo. Error, placeat.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Libero reiciendis porro fugiat minus nihil inventore iusto corrupti sed minima, quasi officia
+                        voluptas similique! Autem animi impedit obcaecati consequuntur nobis dolorum, laborum, aliquam
+                        exercitationem quas porro hic quod cumque.</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Itaque ad necessitatibus rem nobis maxime officiis illum asperiores soluta perferendis sunt
+                        autem, consequatur beatae, mollitia neque. Ratione quod dicta facere aliquid illum fugiat et
+                        corporis obcaecati, sunt fuga fugit!</p>
+                </div>
+            </li>
+            <li class="flex-grid-item">
+                <div class="flex-grid-item-content">
+                    <p>Quo delectus unde velit temporibus nam ipsam incidunt, rerum neque magnam quas. Assumenda ratione
+                        tempore fugiat cum similique pariatur hic numquam amet dolorem perspiciatis magni, qui possimus
+                        autem culpa. Pariatur!</p>
+                </div>
+            </li>
+        </ul>
+
+</body>
+
+</html>
