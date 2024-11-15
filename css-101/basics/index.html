@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic CSS styling</title>
+
+  <style>
+    /* Basic CSS reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .box-a {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .box-b {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+      width: 50%;
+      background-color: #f8d7da;
+    }
+
+    .box-c-container {
+      position: relative;
+      border: 1px solid #000;
+      width: 50%;
+    }
+
+    .box-c {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+      position: relative;
+      top: -2rem;
+      right: -50%;
+      width: 50%;
+    }
+
+    .card {
+      border: 1px solid #000;
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .card-header {
+      background-color: #f8d7da;
+      padding: 1rem;
+    }
+
+    .card-body {
+      padding: 1rem 1rem 4rem;
+    }
+
+    .card-button {
+      background-color: #f8d7da;
+      padding: 0.5rem;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      min-width: 8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Basic CSS styling</h1>
+    <p>Basic CSS styling is a good starting point for any project</p>
+
+    <div class="box-a">
+      <h2>Box A</h2>
+      <p>Box A is a simple box with a border, some padding and a margin</p>
+    </div>
+
+    <pre>
+      .box-a {
+        border: 1px solid #000;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+    </pre>
+
+    <div class="box-b">
+      <h2>Box B</h2>
+      <p>Box B is a simple box with a border, some padding and a margin,
+        also with a defined width and a background-color</p>
+    </div>
+
+    <pre>
+      .box-b {
+        border: 1px solid #000;
+        padding: 1rem;
+        margin: 1rem 0;
+        width: 50%;
+        background-color: #f8d7da;
+      }
+    </pre>
+
+    <div>
+
+      <h2>Example of position relative</h2>
+
+      <div class="box-c-container">
+        <p>Box C is inside this box</p>
+        <div class="box-c">
+          <h2>Box C</h2>
+          <p>Box C is a simple box with a border, some padding and a margin,
+            moved out from the normal flow</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Putting it all together</h2>
+
+      <div class="card" style="width:16rem">
+        <div class="card-header">
+          <h2>Card header</h2>
+        </div>
+        <div class="card-body">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque fugit illo cupiditate exercitationem eligendi velit, veritatis quas inventore enim explicabo quod consequuntur praesentium, consequatur nihil sequi et numquam, obcaecati a?</p>
+        </div>
+        <button class="card-button">Click me</button>
+      </div>
+    </div>
+
+    <pre>
+      .card {
+        border: 1px solid #000;
+        margin: 1rem 0;
+        position: relative;
+      }
+  
+      .card-header {
+        background-color: #f8d7da;
+        padding: 1rem;
+      }
+  
+      .card-body {
+        padding: 1rem 1rem 4rem;
+      }
+  
+      .card-button {
+        background-color: #f8d7da;
+        padding: 0.5rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        min-width: 8rem;
+      }
+    </pre>
+  </div>
+
+</body>
+
+</html>

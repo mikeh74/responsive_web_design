@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units</title>
+
+  <style>
+    /** Basic CSS reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin: 1rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin: 2rem 0;
+      padding: 1rem;
+      border: 1px solid #000;
+    }
+
+    .box {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+      background-color: #f8d7da;
+    }
+
+    .box-w100 {
+      width: 100%;
+    }
+
+    .box-w50 {
+      width: 50%;
+    }
+
+    .box-w75 {
+      width: 75%;
+    }
+
+    .box-w25 {
+      width: 25%;
+    }
+
+    .box-vw100 {
+      width: 100vw;
+    }
+
+    .box-vh100 {
+      height: 100vh;
+    }
+
+    .box-vw50 {
+      width: 50vw;
+    }
+
+    .box-vh50 {
+      height: 50vh;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="section">
+
+      <h1>Examples of CSS Units</h1>
+      <div>
+        <h2>Sizing with REMs</h2>
+
+        <p>REM stands for "root em". It is a unit of measurement that is relative to the root element's font-size. The
+          root element is the <code>&lt;html&gt;</code> element. REMs are useful for creating a consistent layout that
+          scales well across different screen sizes.</p>
+        <p>By default, the root font-size is 16px. This means that 1rem is equal to 16px. If you change the root
+          font-size to 20px, then 1rem will be equal to 20px.</p>
+
+        <h2>Example</h2>
+        <p style="font-size: 1rem">This text is 1rem in size</p>
+        <p style="font-size: 1.5rem;">This text is 1.5rem in size</p>
+        <p style="font-size: 2rem;">This text is 2rem in size</p>
+        <p style="font-size: 3rem;">This text is 3rem in size</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Percentage sizing</h2>
+
+        <p>The percentage unit is relative to the parent element's size.
+
+        <h2>Example</h2>
+
+        <div class="box box-w100">
+          This div is 100% of the parent element's width
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis reiciendis iusto obcaecati accusantium earum sint fugit, expedita quae ipsum exercitationem tempore amet facilis fugiat a, quibusdam soluta temporibus provident vero!</p>
+        </div>
+
+        <div class="box box-w25">
+          <p>This div is 25% of the parent element's width</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis omnis nulla aut atque excepturi incidunt placeat qui officiis aliquid architecto est dolorum provident, accusamus, tenetur in sunt consequuntur, libero illo.</p>
+        </div>
+
+        <div class="box box-w50">
+          <p>This div is 50% of the parent element's width</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet facere nemo, quam, odio laudantium quidem, perferendis incidunt repellendus harum cum cumque sint aliquid sit optio eaque deserunt iusto molestiae esse?</p>
+        </div>
+
+        <div class="box box-w75">
+          <p>This div is 75% of the parent element's width</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam vero vel eos maiores corrupti numquam maxime, quam, unde libero optio minima aperiam dolores nesciunt voluptates, est illo cum eaque!</p>
+        </div>
+    </div>
+
+    <div class="section">
+
+      <h2>Viewport units</h2>
+
+      <p>Viewport units are relative to the size of the browser window. They are useful for creating a layout that
+        scales well across different screen sizes.</p>
+
+      <h2>Example</h2>
+
+      <div class="box box-vw100">
+        <p>This div is 100% of the viewport width</p>
+      </div>
+
+      <div class="box box-vw50 box-vh50">
+        <p>This div is 50vw and 50vh</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

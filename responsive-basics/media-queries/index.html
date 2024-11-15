@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+
+  <style>
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .box {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+      background-color: rgb(248, 154, 154);
+    }
+
+    @media (min-width: 300px) {
+      .box {
+        background-color: rgb(230, 187, 107);
+      }
+    }
+
+    @media (min-width: 400px) {
+      .box {
+        background-color: rgb(248, 248, 130);
+      }
+    }
+
+    @media (min-width: 500px) {
+      .box {
+        background-color: rgb(145, 253, 145);
+      }
+    }
+
+    @media (min-width: 600px) {
+      .box {
+        background-color: rgb(176, 225, 241);
+      }
+    }
+
+    @media (min-width: 700px) {
+      .box {
+        background-color: rgb(247, 195, 247);
+      }
+    }
+
+    @media (min-width: 800px) {
+      .box {
+        background-color: pink;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .box {
+        background-color: rgb(165, 165, 239);
+      }
+    }
+
+    .boxa {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+      background-color: rgb(244, 187, 187);
+      width: 100%;
+    }
+
+    /** series of media queries for box width changing every 200px with width decreasing in 20% increments where less than 400px wide is 100% */
+    @media (min-width: 300px) {
+      .boxa {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 400px) {
+      .boxa {
+        width: 80%;
+      }
+    }
+
+    @media (min-width: 600px) {
+      .boxa {
+        width: 60%;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .boxa {
+        width: 40%;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .boxa{
+        width: 20%;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Media Queries</h1>
+    <p>Media queries are a way to apply CSS rules based on certain conditions. For example, you can apply different styles based on the width of the viewport.</p>
+
+    <div class="box">
+      <p>This box changes color based on the viewport width</p>
+    </div>
+
+    <p>Here's an example of a media query that applies a different background color when the viewport size changes</p>
+
+    <p>Media queries can also be used to apply different styles based on other conditions, such as device orientation, screen resolution, and more.</p>
+    <p>Resize the browser window to see the background color change</p>
+
+    <div class="boxa">
+      <p>This box changes width based on the viewport width</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
