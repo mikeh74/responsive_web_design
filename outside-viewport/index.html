@@ -10,18 +10,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <title>Responsive Images Example</title>
+    <title>Elements outside viewport</title>
+
+    <style>
+
+        .lozenge::before {
+          content: "";
+          position: absolute;
+          background-color: #f8d7da;
+          border: 1px solid #f5c6cb;
+          height: 100%;
+          top: 0;
+          padding: 1rem;
+          border-radius: 5rem
+        }
+
+        .lozenge-left::before {
+            width: 100vw;
+            right: -10%;
+        }
+
+        .lozenge-right::before {
+            width: 100vw;
+            left: -10%;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 200;
+            padding: 1rem;
+        }
+
+    </style>
+
 </head>
 
 <body>
-    <div class="jumbotron" style="background: url(./img6.jpg) no-repeat center; background-size: cover;">
+    <div class="jumbotron">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 my-5">
-                    <div class="card" style="opacity: 0.9;">
+                    <div class="card">
                         <div class="card-body border-rounded">
-                            <h1> Image Examples</h1>
-                            <p class="lead">Banner background image, ratio not fixed, height is dependent on the content inside this block</p>
+                            <h1>Elements outside viewport</h1>
+                            <p class="lead">Elements which cross the edge of the viewport can be problematic from a responsive perspective</p>
                         </div>
                     </div>
                 </div>
@@ -32,14 +64,28 @@
     <div class="container-fluid" style="max-width: 1140px;">
         <div class="row">
             <div class="col-12 col-md-6">
+              <div class="lozenge lozenge-left">
+                <div class="overlay">
+                  <p class="h3">Image on right maintains aspect ratio</p>
+                  <p>Consider how the amount of content on the left balances with the image.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iste temporibus neque porro odio illum. Accusamus eum, sapiente aut aliquid ullam unde, pariatur tenetur temporibus ab quasi nisi, obcaecati eaque.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <div class="lozenge lozenge-right">
+              <div class="overlay">
                 <p class="h3">Image on right maintains aspect ratio</p>
                 <p>Consider how the amount of content on the left balances with the image.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iste temporibus neque porro odio illum. Accusamus eum, sapiente aut aliquid ullam unde, pariatur tenetur temporibus ab quasi nisi, obcaecati eaque.</p>
+              </div>
             </div>
-            <div class="col-12 col-md-6">
-                <img class="img-fluid ratio_16x9" alt="" src="./img6.jpg" />
-            </div>
-        </div>
+          </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
