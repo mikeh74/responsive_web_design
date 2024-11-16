@@ -11,6 +11,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/src/style.css">
 
     <title>Responsive Typography Example</title>
 </head>
@@ -33,8 +34,46 @@
             <p>With both the responsive examples above it is worth noting that we
                 control the smallest and largest display sizes.</p>
         </div>
+
+        <div>
+            <h2>Media Queries</h2>
+            <pre>
+                <code>
+        @media (max-width:991px) {
+            .mq-text {
+                font-size: calc(1rem * 4.5);
+            }
+        }
+        
+        @media (max-width:767px) {
+            .mq-text {
+                font-size: calc(1rem * 3.5);
+            }
+        }
+        
+        @media (max-width:575px) {
+            .mq-text {
+                font-size: calc(1rem * 2.5);
+            }
+        }
+                </code>
+            </pre>
+
+            <h2>Fluid Example using clamp</h2>
+
+            <pre>
+                <code>
+        .vw-text {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+        }
+                </code>
+            </pre>
+
+        </div>
+
     </div>
 
+    <a href="/" class="btn btn-home">Home</a>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

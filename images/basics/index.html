@@ -5,18 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Images</title>
 
+  <link rel="stylesheet" href="/src/style.css">
+
   <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
 
     .container-md {
       max-width: 800px;
@@ -26,18 +17,6 @@
     /** scroll snap based on .full-page elements */
     html {
       scroll-snap-type: y proximity;
-    }
-
-    body {
-      scroll-snap-type: y proximity;
-      overflow-y: scroll;
-    }
-
-    .full-page {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      scroll-snap-align: start;
     }
 
     h1, h2, p {
@@ -165,6 +144,8 @@
       </div>
     </div>
   </div>
+
+  <a href="/" class="btn btn-home">Home</a>
 
 </body>
 </html>

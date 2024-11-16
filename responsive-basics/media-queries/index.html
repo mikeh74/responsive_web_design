@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Queries</title>
 
+  <link rel="stylesheet" href="/src/style.css">
+
   <style>
 
     .container {
@@ -125,6 +127,44 @@
       <p>This box changes color based on the viewport width</p>
     </div>
 
+    <pre>
+      <code>
+        .box {
+          border: 1px solid #000;
+          padding: 1rem;
+          margin: 1rem 0;
+          background-color: rgb(248, 154, 154);
+        }
+
+        @media (min-width: 300px) {
+          .box {
+            background-color: rgb(230, 187, 107);
+          }
+        }
+
+        @media (min-width: 400px) {
+          .box {
+            background-color: rgb(248, 248, 130);
+          }
+        }
+
+        ...
+
+        @media (min-width: 800px) {
+          .box {
+            background-color: pink;
+          }
+        }
+
+        @media (min-width: 900px) {
+          .box {
+            background-color: rgb(198, 198, 238);
+          }
+        }
+
+      </code>
+    </pre>
+
     <p>Here's an example of a media query that applies a different background color when the viewport size changes</p>
 
     <p>Media queries can also be used to apply different styles based on other conditions, such as device orientation, screen resolution, and more.</p>
@@ -138,6 +178,8 @@
       <p>This box is hidden on screens wider than 600px</p>
     </div>
   </div>
+
+  <a href="/" class="btn btn-home">Home</a>
 
 </body>
 </html>

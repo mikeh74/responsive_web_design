@@ -6,13 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basic CSS styling</title>
 
+  <link rel="stylesheet" href="/src/style.css">
+
   <style>
-    /* Basic CSS reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
     .container {
       width: 80%;
@@ -34,7 +30,6 @@
     }
 
     .box-c-container {
-      position: relative;
       border: 1px solid #000;
       width: 50%;
     }
@@ -42,11 +37,11 @@
     .box-c {
       border: 1px solid #000;
       padding: 1rem;
-      margin: 1rem 0;
+      margin: 1rem;
       position: relative;
-      top: -2rem;
-      right: -50%;
-      width: 50%;
+      top: -1rem;
+      left: 3rem;
+      width: 40%;
     }
 
     .card {
@@ -76,53 +71,74 @@
 </head>
 
 <body>
-
   <div class="container">
     <h1>Basic CSS styling</h1>
     <p>Basic CSS styling is a good starting point for any project</p>
 
     <div class="box-a">
       <h2>Box A</h2>
-      <p>Box A is a simple box with a border, some padding and a margin</p>
+      <p>This is a simple box with a border, some padding and a margin</p>
     </div>
 
     <pre>
-      .box-a {
-        border: 1px solid #000;
-        padding: 1rem;
-        margin: 1rem 0;
-      }
+      <code>
+        .box-a {
+          border: 1px solid #000;
+          padding: 1rem;
+          margin: 1rem 0;
+        }
+      </code>
     </pre>
 
     <div class="box-b">
       <h2>Box B</h2>
-      <p>Box B is a simple box with a border, some padding and a margin,
+      <p>This is a simple box with a border, some padding and a margin,
         also with a defined width and a background-color</p>
     </div>
 
     <pre>
-      .box-b {
-        border: 1px solid #000;
-        padding: 1rem;
-        margin: 1rem 0;
-        width: 50%;
-        background-color: #f8d7da;
-      }
+      <code>
+        .box-b {
+          border: 1px solid #000;
+          padding: 1rem;
+          margin: 1rem 0;
+          width: 50%;
+          background-color: #f8d7da;
+        }
+      </code>
     </pre>
 
     <div>
-
       <h2>Example of position relative</h2>
 
       <div class="box-c-container">
         <p>Box C is inside this box</p>
         <div class="box-c">
           <h2>Box C</h2>
-          <p>Box C is a simple box with a border, some padding and a margin,
+          <p>This is a simple box with a border, some padding and a margin,
             moved out from the normal flow</p>
         </div>
       </div>
     </div>
+
+    <pre>
+      <code>
+        .box-c-container {
+          border: 1px solid #000;
+          width: 50%;
+        }
+    
+        .box-c {
+          border: 1px solid #000;
+          padding: 1rem;
+          margin: 1rem;
+          position: relative;
+          top: -1rem;
+          left: 3rem;
+          width: 40%;
+        }
+      </code>
+    </pre>
 
     <div>
       <h2>Putting it all together</h2>
@@ -139,31 +155,35 @@
     </div>
 
     <pre>
-      .card {
-        border: 1px solid #000;
-        margin: 1rem 0;
-        position: relative;
-      }
-  
-      .card-header {
-        background-color: #f8d7da;
-        padding: 1rem;
-      }
-  
-      .card-body {
-        padding: 1rem 1rem 4rem;
-      }
-  
-      .card-button {
-        background-color: #f8d7da;
-        padding: 0.5rem;
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        min-width: 8rem;
-      }
+      <code>
+        .card {
+          border: 1px solid #000;
+          margin: 1rem 0;
+          position: relative;
+        }
+    
+        .card-header {
+          background-color: #f8d7da;
+          padding: 1rem;
+        }
+    
+        .card-body {
+          padding: 1rem 1rem 4rem;
+        }
+    
+        .card-button {
+          background-color: #f8d7da;
+          padding: 0.5rem;
+          position: absolute;
+          bottom: 1rem;
+          right: 1rem;
+          min-width: 8rem;
+        }
+      </code>
     </pre>
   </div>
+
+  <a href="/" class="btn btn-home">Home</a>
 
 </body>
 
