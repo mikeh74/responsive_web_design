@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Images</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .container-md {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /** scroll snap based on .full-page elements */
+    html {
+      scroll-snap-type: y proximity;
+    }
+
+    body {
+      scroll-snap-type: y proximity;
+      overflow-y: scroll;
+    }
+
+    .full-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      scroll-snap-align: start;
+    }
+
+    h1, h2, p {
+      margin: 0.5rem 0;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .img-fit {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .w-100 {
+      width: 100% !important;
+    }
+
+    .ratio_16x9 {
+      aspect-ratio: 16/9;
+    }
+
+    .ratio_5x4 {
+      aspect-ratio: 5/4;
+    }
+
+    .ratio_3x2 {
+      aspect-ratio: 3/2;
+    }
+
+    .ratio_1x1 {
+      aspect-ratio: 1/1;
+    }
+
+    .flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .flex-grid-item {
+      flex: 1 1 50%;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="full-page">
+    <div class="container">
+      <div>
+        <h1>Images</h1>
+        <h2>Default display</h2>
+        <figure>
+          <img src="../images/IMG_1_md.jpg" alt="">
+          <figcaption>By default an image will take up the size of the image in pixles on the 
+            screen, in this instance the image is 554px x 416px, the space available
+            to it is larger but the image won't increase in size by default.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container">
+      <div>
+        <h2>Responsive Display</h2>
+        <figure>
+          <img class="img-fluid" src="../images/IMG_1_md.jpg" alt="">
+          <figcaption>Forced max-width: 100% and height:auto</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container">
+      <div>
+        <h2>Responsive Display forced 100% width</h2>
+        <p>If we make the width so that it's always 100% then the image will
+          continue to grow past it's normal dimensions to fill whatever space
+          is available.
+        </p>
+        <figure>
+          <img class="img-fluid w-100" src="../images/IMG_1_md.jpg" alt="">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container-md">
+      <div>
+        <h2>Aspect Ratios</h2>
+        <ul class="flex-grid">
+          <li class="flex-grid-item">
+            <p>16 x 9</p>
+            <div class="ratio_16x9">
+              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+            </div>
+          </li>
+          <li class="flex-grid-item">
+            <p>3 x 2</p>
+            <div class="ratio_3x2">
+              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+            </div>
+          </li>
+          <li class="flex-grid-item">
+            <p>5 x 4</p>
+            <div class="ratio_5x4">
+              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+            </div>
+          </li>
+          <li class="flex-grid-item">
+            <p>1 x 1</p>
+            <div class="ratio_1x1">
+              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
