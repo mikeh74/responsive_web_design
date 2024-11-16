@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Grids</title>
+
+  <style>
+
+    /* Basic CSS reset */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .full-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /** scroll snap based on .full-page elements */
+    html {
+      scroll-snap-type: y mandatory;
+    }
+
+    body {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    .full-page {
+      scroll-snap-align: start;
+    }
+
+    h1, h2, p {
+      margin: 1rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+  .g12 .parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .g12 .span-12 {
+    grid-column: 1 / span 12;
+  }
+
+  .g12 .span-6 {
+    grid-column: 1 / span 6;
+  }
+
+  .g12 .span-4 {
+    grid-column: 4 / span 4;
+  }
+
+  .g12 .span-2 {
+    grid-column: 3 / span 2;
+  }
+
+  /* centering text */
+  .g12 .section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    min-height: 6rem;
+  }
+
+  .green {
+    background-color: rgb(145, 253, 145);
+  }
+
+  .coral {
+    background-color: rgb(255, 215, 180);
+  }
+
+  .blue {
+    background-color: rgb(176, 225, 241);
+  }
+
+  .yellow {
+    background-color: rgb(248, 248, 130);
+  }
+
+  .flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  .flex-grid-item {
+    flex: 1 1 32%;
+    padding: 0.5rem;
+    min-width: 250px;
+  }
+
+  .box {
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(176, 225, 241);
+    border: 1px solid #000;
+  }
+
+  </style>
+
+</head>
+<body>
+
+<div class="full-page">
+  <div>
+    <h1>Fluid Grids</h1>
+    <p>This display uses CSS grid and 100vh to center the content in the page</p>
+    <p>This type of layout used to be quite difficult to achieve before we had flexbox and CSS grids</p>
+    <p>These examples also use scroll snap (relatively new in the CSS spec).</p>
+    <p>Scroll down to see more examples</p>
+  </div>
+</div>
+
+<div class="full-page">
+  <div class="container">
+    <h2>CSS Grid</h2>
+    <p>CSS grids are still a relatively new part of the CSS specification. They allow us to quickly build grid like designs</p>
+    <p>This is an example showing a 12 column grid (a common pattern in web design).</p>
+
+    <div class="g12">
+      <div class="parent white">
+        <div class="span-12 green section">Span 12</div>
+        <div class="span-6 coral section">Span 6</div>
+        <div class="span-4 blue section">Span 4</div>
+        <div class="span-2 yellow section">Span 2</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full-page">
+  <div class="container">
+    <h2>Flex Grid</h2>
+    <p>Flex box wasn't designed for laying out grids but it can work well.</p>
+
+    <ul class="flex-grid">
+      <li class="flex-grid-item">
+        <div class="box">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis iusto tempora temporibus deserunt soluta, praesentium odit ea nemo illo adipisci blanditiis sunt. Eligendi qui rerum exercitationem temporibus, quaerat enim!</p>
+        </div>
+      </li>
+      <li class="flex-grid-item">
+        <div class="box">
+          <p>Aspernatur labore mollitia nulla tempora numquam deserunt a repellat ipsa voluptas id, omnis quos enim quaerat temporibus iste facere eos quasi debitis maxime earum cumque possimus adipisci, aperiam quibusdam? Perspiciatis.</p>
+        </div>
+      </li>
+      <li class="flex-grid-item">
+        <div class="box">
+          <p>Vel labore cum sapiente suscipit tempore dolor expedita itaque nisi. Neque, sequi repudiandae? Minus, nesciunt? Perspiciatis, asperiores corporis recusandae inventore rerum sit sint distinctio magnam exercitationem nulla dolores debitis odit!</p>
+        </div>
+      </li>
+      <li class="flex-grid-item">
+        <div class="box">
+          <p>Alias, impedit harum. Dolorem in quidem aut excepturi est esse ipsam molestias labore aliquid iure quam, voluptate eum quia perferendis saepe cupiditate dolore, dignissimos rem laborum. Hic sed provident quia!</p>
+        </div>
+      </li>
+      <li class="flex-grid-item">
+        <div class="box">
+          <p>Exercitationem a modi magnam obcaecati iste enim neque numquam quas sequi autem! Veritatis illo velit est accusamus excepturi nisi, reiciendis reprehenderit esse tempore rerum quod non aperiam nostrum! Iure, ab!</p>
+        </div>
+      </li>
+      <li class="flex-grid-item">
+        <div class="box">
+          <p>Accusantium itaque numquam iusto quaerat ipsam voluptatum ad quas nostrum deleniti magni! Officia dicta laudantium nobis eaque asperiores, culpa provident omnis, similique corporis, esse facere iste. Similique pariatur nesciunt eaque?</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="full-page">
+  <div class="container">
+    <h2>Grids in the real world</h2>
+    <p>Grids are a common pattern in web design and allow for the creation of flexible and complex layouts</p>
+    <p>These are just a couple of very simplistic examples.</p>
+  </div>
+</div>
+
+</body>
+</html>

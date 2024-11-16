@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Containers</title>
+
+  <style>
+
+    /* Basic CSS reset */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .container-md {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .box {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin: 1rem 0;
+      /* background-color: rgb(248, 192, 192); */
+    }
+
+    .spacer {
+      margin: 1rem 0;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="spacer">
+      <h2>Container</h2>
+      <p>Containers are used to wrap content and apply a max-width to it.</p>
+
+      <p>They are not an inherent part of the CSS specification but are commonly
+        used in web development to keep content from stretching too wide on large
+        screens.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="container-md">
+    <div class="spacer">
+      <h2>Container-md</h2>
+      <p>Containers can have different sizes.</p>
+    </div>
+  </div>
+
+  <div class="spacer">
+    <h2>Example of content not bounded by a container</h2>
+    <p>Long lines can make content harder to read.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto facilis doloremque quod dolor! Itaque earum impedit dignissimos, quia nam cum harum, quo expedita saepe omnis minus reprehenderit reiciendis, quibusdam magnam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam a est voluptatibus vero, atque cum optio dolore quasi! Necessitatibus minus eaque magni dolor obcaecati est dicta distinctio debitis aliquam?</p>
+  </div>
+
+</body>
+</html>
