@@ -3,9 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index Page</title>
+  <title>Responsive Web Design Basics</title>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .link-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .link-item {
+      flex: 1 1 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(233, 233, 233);
+      min-height: 5rem;
+    }
+
+  </style>
+
 </head>
 <body>
-  <h1>Homepage</h1>
+
+  <div class="container">
+    <h1>Responsive Web Design</h1>
+
+    <div class="link-items">
+      <div class="link-item">
+        <a href="./css-101/box-model/">HTML Box Model</a>
+      </div>
+      <div class="link-item">
+        <a href="./css-101/basics/">CSS 101</a>
+      </div>
+      <div class="link-item">
+        <a href="./css-101/css-units/">CSS Units</a>
+      </div>
+
+      <div class="link-item">
+        <a href="./responsive-basics/media-queries/">Media Queries</a>
+      </div>
+      <div class="link-item">
+        <a href="./responsive-basics/fluid-grids/">Fluid Grids</a>
+      </div>
+      <div class="link-item">
+        <a href="./responsive-basics/containers/">Containers</a>
+      </div>
+      <div class="link-item">
+        <a href="./responsive-basics/typography/">Typography</a>
+      </div>
+
+      <div class="link-item">
+        <a href="./images/basics/">Images</a>
+      </div>
+
+      <div class="link-item">
+        <a href="./images/banners/">Banners</a>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
