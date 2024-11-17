@@ -73,11 +73,13 @@
 <body>
   <div class="container">
     <h1>Basic CSS styling</h1>
-    <p>Basic CSS styling is a good starting point for any project</p>
+    <p>CSS allows us to create style rules to target html elements and style
+      their boxes.
+    </p>
 
     <div class="box-a">
       <h2>Box A</h2>
-      <p>This is a simple box with a border, some padding and a margin</p>
+      <p>This is a simple CSS rule with a border, some padding and a margin</p>
     </div>
 
     <pre>
@@ -92,8 +94,8 @@
 
     <div class="box-b">
       <h2>Box B</h2>
-      <p>This is a simple box with a border, some padding and a margin,
-        also with a defined width and a background-color</p>
+      <p>This is the same as the example above but with a background colour and 
+        a width added.</p>
     </div>
 
     <pre>
@@ -115,19 +117,19 @@
         <p>Box C is inside this box</p>
         <div class="box-c">
           <h2>Box C</h2>
-          <p>This is a simple box with a border, some padding and a margin,
-            moved out from the normal flow</p>
+          <p>Slightly more advanced example showing relative positioning.</p>
         </div>
       </div>
     </div>
 
     <pre>
       <code>
+
         .box-c-container {
           border: 1px solid #000;
           width: 50%;
         }
-    
+
         .box-c {
           border: 1px solid #000;
           padding: 1rem;
@@ -143,6 +145,7 @@
     <div>
       <h2>Putting it all together</h2>
 
+      <!-- inline styling is bad and should not be used, also non-relative unit for width is generally a bad idea -->
       <div class="card" style="width:16rem">
         <div class="card-header">
           <h2>Card header</h2>
@@ -161,12 +164,12 @@
           margin: 1rem 0;
           position: relative;
         }
-    
+
         .card-header {
           background-color: #f8d7da;
           padding: 1rem;
         }
-    
+
         .card-body {
           padding: 1rem 1rem 4rem;
         }

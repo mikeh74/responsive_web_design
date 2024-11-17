@@ -61,3 +61,23 @@ p {
 code {
   font-family: 'Courier New', Courier, monospace
 }
+
+.w-100 {
+  width: 100% !important;
+}
+
+.vw-60 {
+  width: 60vw !important;
+}
+
+.vh-20 {
+  height: 20vh !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.border {
+  border: 1px solid #000;
+}

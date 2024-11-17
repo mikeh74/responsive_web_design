@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Containers</title>
 
-  <style>
+  <link rel="stylesheet" href="../../src/style.css">
 
+  <style>
     /* Basic CSS reset */
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      border: 1px solid #000;
+      /* border: 1px solid #000; */
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      border: 2px solid #000;
     }
 
     .container-md {
       max-width: 800px;
       margin: 0 auto;
+      border: 2px solid #000;
     }
 
     .box {
@@ -37,36 +41,151 @@
       margin: 1rem 0;
     }
 
+    .flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+
+    .flex-grid-item {
+      flex: 1 1 32%;
+    }
+
+    .flex-grid-item p {
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid #000;
+      height: 100%;
+      background-color: rgb(236, 236, 236);
+    }
+
   </style>
 
 </head>
+
 <body>
-  
-  <div class="container">
-    <div class="spacer">
-      <h2>Container</h2>
-      <p>Containers are used to wrap content and apply a max-width to it.</p>
 
-      <p>They are not an inherent part of the CSS specification but are commonly
-        used in web development to keep content from stretching too wide on large
-        screens.
-      </p>
+  <div class="full-page">
+    <div class="container">
+      <div class="spacer">
+        <h2>Container</h2>
+        <p>The containers that we are referring to here are part of the Bootstrap
+          CSS framework. They are used to wrap content and apply a max-width to it.</p>
+
+        <p>They are not an inherent part of the CSS specification but are commonly
+          used in web development to keep content from stretching too much on large
+          screens.</p>
+
+        <p>They stop line length getting too long and making it hard to read
+          content. They also help to keep content centered on the page.
+        </p>
+
+        <p>It also helps to ensure that relatively sized elements don't start
+          getting too large on large screens. Items which are sized based on
+          viewport units can get very large on large screens.
+        </p>
+
+        <p>There is a container which is formal part of the CSS specification
+          but this is not what we are discussing here.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container-md w-100">
+      <div class="spacer">
+        <h2>Container-md</h2>
+        <p>Containers can have different sizes.</p>
+        <p>Here we have a container with a max-width of 800px.</p>
+        <p>In general we use a container with a max-width of 1140px</p>
+
+        <h3>Grid inside container</h3>
+
+        <ul class="flex-grid">
+          <li class="flex-grid-item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut exercitationem delectus soluta, id facere aut necessitatibus obcaecati unde, fugit vero veniam modi aperiam eos suscipit, totam excepturi ab a.</p>
+          </li>
+          <li class="flex-grid-item">
+            <p>Natus explicabo temporibus sit? Ex distinctio cum alias dolor vero tenetur repellendus hic deserunt rem! Magnam ipsa at accusantium quo odio obcaecati dolor accusamus aut? Voluptatum necessitatibus perspiciatis eum maxime!</p>
+          </li>
+          <li class="flex-grid-item">
+            <p>Nam, praesentium voluptate. Eligendi, error. Laudantium et molestiae vel nostrum perspiciatis distinctio necessitatibus, reiciendis sunt eius voluptate ipsa, quae beatae atque expedita? Accusamus suscipit quia, qui voluptatibus sint eos dicta.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container-md w-100">
+      <div class="spacer">
+        <h2>Mixing Width Units</h2>
+        <p>Here we have a container with max-width of 800px</p>
+
+        <div class="vw-60 vh-20 bg-light border">
+          But this div has a width of 80vw (and a height of 20vh)
+        </div>
+
+        <p>It is important to be aware of how different width units interact with
+          each other.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="w-100 border">
+      <h2>Example of content not bounded by a container</h2>
+      <p>Long lines can make content harder to read.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto facilis doloremque quod dolor! Itaque earum
+        impedit dignissimos, quia nam cum harum, quo expedita saepe omnis minus reprehenderit reiciendis, quibusdam
+        magnam.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam a est voluptatibus vero, atque cum optio
+        dolore quasi! Necessitatibus minus eaque magni dolor obcaecati est dicta distinctio debitis aliquam?</p>
+
+      <ul class="flex-grid">
+        <li class="flex-grid-item">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut exercitationem delectus soluta, id facere aut necessitatibus obcaecati unde, fugit vero veniam modi aperiam eos suscipit, totam excepturi ab a.</p>
+        </li>
+        <li class="flex-grid-item">
+          <p>Natus explicabo temporibus sit? Ex distinctio cum alias dolor vero tenetur repellendus hic deserunt rem! Magnam ipsa at accusantium quo odio obcaecati dolor accusamus aut? Voluptatum necessitatibus perspiciatis eum maxime!</p>
+        </li>
+        <li class="flex-grid-item">
+          <p>Nam, praesentium voluptate. Eligendi, error. Laudantium et molestiae vel nostrum perspiciatis distinctio necessitatibus, reiciendis sunt eius voluptate ipsa, quae beatae atque expedita? Accusamus suscipit quia, qui voluptatibus sint eos dicta.</p>
+        </li>
+      </ul>
 
     </div>
   </div>
 
-  <div class="container-md">
-    <div class="spacer">
-      <h2>Container-md</h2>
-      <p>Containers can have different sizes.</p>
-    </div>
-  </div>
+  <div class="full-page">
+    <div>
+      <h2>Example websites which use a container to constrain content</h2>
+      <div>
+        <a rel="noopener" href="https://www.bbc.co.uk/news" target="_blank">BBC News</a>
+        <a rel="noopener" href="https://www.theguardian.com/uk" target="_blank">The Guardian</a>
+        <a rel="noopener" href="https://www.nytimes.com/" target="_blank">The New York Times</a>
+        <a rel="noopener" href="https://www.argos.co.uk" target="_blank">Argos</a>
+        <a rel="noopener" href="https://uk.hotels.com" target="_blank">Hotels.com</a>
+        <a rel="noopener" href="https://www.next.co.uk" target="_blank">Next</a>
+        <a rel="noopener" href="https://www.microsoft.com/en-gb/" target="_blank">Microsoft</a>
+      </div>
 
-  <div class="spacer">
-    <h2>Example of content not bounded by a container</h2>
-    <p>Long lines can make content harder to read.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto facilis doloremque quod dolor! Itaque earum impedit dignissimos, quia nam cum harum, quo expedita saepe omnis minus reprehenderit reiciendis, quibusdam magnam.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam a est voluptatibus vero, atque cum optio dolore quasi! Necessitatibus minus eaque magni dolor obcaecati est dicta distinctio debitis aliquam?</p>
+      <div>
+        <p>The sites below have a different display for the home page but other
+          pages use a container to constrain the content.</p>
+        </p>
+        <a rel="noopener" href="https://www.johnlewis.com/browse/home-garden/towels/_/N-cpw" target="_blank">John Lewis</a>
+        <a rel="noopener" href="https://www.marksandspencer.com/l/men/mens-coats-and-jackets#intid=gnav_men_core_clothing_coats-and-jackets" target="_blank">Marks and Spencer</a>
+        <a rel="noopener" href="https://www.next.co.uk" target="_blank">Next</a>
+        <a rel="noopener" href="https://www.asos.com/men/hoodies-sweatshirts/cat/?cid=5668" target="_blank">Asos</a>
+      </div>
+
+    </div>
   </div>
 
 </body>
