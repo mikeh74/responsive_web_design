@@ -60,6 +60,27 @@
     height: 100%;
   }
 
+  .banner-content-responsive {
+    margin: 1rem;
+    width: 80%;
+  }
+
+  .banner-responsive {
+    aspect-ratio: 21/9;
+  }
+
+  @media (min-width: 920px) {
+
+    .banner-content-responsive {
+      margin: 2rem;
+      width: 50%;
+    }
+
+    .banner-responsive {
+      min-height: 350px;
+    }
+  }
+
   </style>
 
 </head>
@@ -158,6 +179,25 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum, at natus molestias dolores autem consectetur tenetur quam soluta et, quo dolor aliquid aliquam veniam iure veritatis minus, provident blanditiis.</p>
 
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>Fixing a height can a useful but we should allow the box to grow when it
+      needs to.
+    </p>
+  </div>
+
+  <div class="banner banner-responsive mt-lg">
+    <div class="container">
+      <div class="banner-content banner-content-responsive">
+        <h1>Using media queries</h1>
+        <p>We can use media queries so that we could have a fixed aspect ratio
+          on smaller screens and force a min-height on larger screens.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
+        
       </div>
     </div>
   </div>
