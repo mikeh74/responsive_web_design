@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Micro Layouts</title>
+
+  <style>
+    .cards {
+      container: cards / inline-size;
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: column;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .card-image {
+      flex: 1 0 40%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      background-color: hsl(40, 69%, 68%);
+    }
+
+    @container cards (width >=50ch) {
+
+      .cards {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(40, 69%, 68%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-image">
+        <img
+          src="https://images.unsplash.com/photo-1716647516446-93c62abe3ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTc1MTYzNTV8&ixlib=rb-4.0.3&q=80&w=400"
+          alt="Closeup of a bright green houseplant's leaves against a light green background.">
+      </div>
+      <div class="card-content">
+        <h2>Article Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
+          similique.</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-image">
+        <img
+          src="https://images.unsplash.com/photo-1716647516446-93c62abe3ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTc1MTYzNTV8&ixlib=rb-4.0.3&q=80&w=400"
+          alt="Closeup of a bright green houseplant's leaves against a light green background.">
+      </div>
+      <div class="card-content">
+        <h2>Article Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
+          similique.</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-image">
+        <img
+          src="https://images.unsplash.com/photo-1716647516446-93c62abe3ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTc1MTYzNTV8&ixlib=rb-4.0.3&q=80&w=400"
+          alt="Closeup of a bright green houseplant's leaves against a light green background.">
+      </div>
+      <div class="card-content">
+        <h2>Article Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
+          similique.</p>
+      </div>
+    </article>
+  </div>
+
+</body>
+
+</html>

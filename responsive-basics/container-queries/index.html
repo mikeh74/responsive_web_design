@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example of Container Queries</title>
+
+  <style>
+    /** Basic CSS reset **/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 50%;
+      outline: 1px solid;
+      margin: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @supports (container-type: inline-size) {
+      .card-wrapper {
+        container-name: card-wrapper;
+        container-type: inline-size;
+      }
+
+      .card {
+        display: flex;
+        background-color: aqua;
+        gap: .5rem;
+        justify-content: space-around;
+      }
+
+      .card-image {
+        display: flex;
+        align-items: center;
+      }
+
+      .card-image {
+        max-height: 100%;
+        min-width: 4rem;
+        padding-left: 1rem;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+      }
+
+      .card-content {
+        padding: .5rem;
+        flex: 1 0 70%;
+      }
+
+      @container card-wrapper (width >=400px) {
+
+        .card {
+          background-color: bisque;
+          flex-direction: column;
+        }
+
+        .card-image {
+          padding-left: 0;
+        }
+
+        .card-image img {
+          border-radius: initial;
+          aspect-ratio: 16 / 9;
+        }
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card-wrapper">
+      <div>
+        <div class="card">
+          <div class="card-image">
+            <img src="../../images/images/IMG_1_md.jpg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Micro layout</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab corrupti eligendi sed est asperiores
+              nostrum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
