@@ -6,22 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Example Micro Layouts</title>
 
+  <link rel="stylesheet" href="../../src/style.css">
   <style>
 
-    h1, h2, h3, h4, h5, h6, p {
+    /* h1, h2, h3, h4, h5, h6, p {
       padding: 0;
       margin: 0;
     }
 
     h2 {
       margin-bottom: .5rem;
-    }
+    } */
 
     .cards {
       container: cards / inline-size;
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       flex-direction: column;
+      margin-top: 1rem;
     }
 
     .card {
@@ -92,41 +94,45 @@
 </head>
 
 <body>
-
-  <div class="cards">
-    <article class="card">
-      <div class="card-image">
-        <img src="../../images/images/IMG_5919_md.jpg"
-          alt="">
-      </div>
-      <div class="card-content">
-        <h2>Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
-          similique.</p>
-      </div>
-    </article>
-    <article class="card">
-      <div class="card-image">
-        <img src="../../images/images/IMG_5919_md.jpg"
-          alt="">
-      </div>
-      <div class="card-content">
-        <h2>Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
-          similique.</p>
-      </div>
-    </article>
-    <article class="card">
-      <div class="card-image">
-        <img src="../../images/images/IMG_5919_md.jpg"
-          alt="">
-      </div>
-      <div class="card-content">
-        <h2>Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
-          similique.</p>
-      </div>
-    </article>
+  <div class="container">
+    <div class="cards">
+      <article class="card">
+        <div class="card-image">
+          <img src="../../images/images/IMG_5919_md.jpg"
+            alt="">
+        </div>
+        <div class="card-content">
+          <h2>Article Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
+            similique.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-image">
+          <img src="../../images/images/IMG_5919_md.jpg"
+            alt="">
+        </div>
+        <div class="card-content">
+          <h2>Article Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
+            similique.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-image">
+          <img src="../../images/images/IMG_5919_md.jpg"
+            alt="">
+        </div>
+        <div class="card-content">
+          <h2>Article Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure harum veniam eius consequatur eum
+            similique.</p>
+        </div>
+      </article>
+    </div>
   </div>
+
+  <a href="../../index.html" class="btn btn-home">Home</a>
+
 </body>
 </html>
