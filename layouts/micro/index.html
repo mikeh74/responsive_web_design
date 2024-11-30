@@ -7,6 +7,16 @@
   <title>Example Micro Layouts</title>
 
   <style>
+
+    h1, h2, h3, h4, h5, h6, p {
+      padding: 0;
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: .5rem;
+    }
+
     .cards {
       container: cards / inline-size;
       display: flex;
@@ -17,20 +27,41 @@
     .card {
       display: flex;
       flex-direction: row;
+      background-color: hsl(39, 56%, 73%);
+      min-width: 300px
     }
 
     .card-image {
-      flex: 1 0 40%;
+      flex: 1 0 30%;
+      padding: 3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     img {
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
       width: 100%;
       height: auto;
+      object-fit: cover;
     }
 
     .card-content {
-      padding: 1.5rem;
-      background-color: hsl(40, 69%, 68%);
+      padding: 1rem;
+    }
+
+    @media (min-width:600px) {
+
+      .cards {
+        flex-direction: row;
+      }
+
+      .card {
+        background-color: hsl(40, 69%, 68%);
+        flex: 1 1 48%;
+        min-width: 100px;
+      }
     }
 
     @container cards (width >=50ch) {
@@ -40,11 +71,21 @@
         flex-direction: column;
       }
 
+      .card-image {
+        display: block;
+        padding: 0;
+      }
+
+      img {
+      border-radius: 0;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
       .card {
-        flex: 1 1 30%;
-        display: flex;
-        flex-direction: column;
-        background-color: hsl(40, 69%, 68%);
+        display: block;
       }
     }
   </style>
@@ -55,9 +96,8 @@
   <div class="cards">
     <article class="card">
       <div class="card-image">
-        <img
-          src="https://images.unsplash.com/photo-1716647516446-93c62abe3ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTc1MTYzNTV8&ixlib=rb-4.0.3&q=80&w=400"
-          alt="Closeup of a bright green houseplant's leaves against a light green background.">
+        <img src="../../images/images/IMG_5919_md.jpg"
+          alt="">
       </div>
       <div class="card-content">
         <h2>Article Title</h2>
@@ -67,9 +107,8 @@
     </article>
     <article class="card">
       <div class="card-image">
-        <img
-          src="https://images.unsplash.com/photo-1716647516446-93c62abe3ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTc1MTYzNTV8&ixlib=rb-4.0.3&q=80&w=400"
-          alt="Closeup of a bright green houseplant's leaves against a light green background.">
+        <img src="../../images/images/IMG_5919_md.jpg"
+          alt="">
       </div>
       <div class="card-content">
         <h2>Article Title</h2>
@@ -79,9 +118,8 @@
     </article>
     <article class="card">
       <div class="card-image">
-        <img
-          src="https://images.unsplash.com/photo-1716647516446-93c62abe3ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTc1MTYzNTV8&ixlib=rb-4.0.3&q=80&w=400"
-          alt="Closeup of a bright green houseplant's leaves against a light green background.">
+        <img src="../../images/images/IMG_5919_md.jpg"
+          alt="">
       </div>
       <div class="card-content">
         <h2>Article Title</h2>
@@ -90,7 +128,5 @@
       </div>
     </article>
   </div>
-
 </body>
-
 </html>

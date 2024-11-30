@@ -9,6 +9,10 @@
 
   <style>
 
+    .full-page {
+      display: block;
+    }
+
   .banner {
     background-image: url(../images/IMG_1_lg.jpg);
     background-size: cover;
@@ -78,6 +82,7 @@
 
     .banner-responsive {
       min-height: 350px;
+      aspect-ratio: initial;
     }
   }
 
@@ -86,126 +91,139 @@
 </head>
 <body>
 
-  <div class="banner">
+  <div class="full-page">
+    <div class="banner">
+      <div class="container">
+        <div class="banner-content">
+          <h1>Basic banner</h1>
+          <p>The banner only takes up as much room as we have text</p>
+        </div>
+      </div>
+    </div>
     <div class="container">
-      <div class="banner-content">
-        <h1>Basic banner</h1>
-        <p>The banner only takes up as much room as we have text</p>
-      </div>
+      <p>This example shows that without any spacing and very little content
+        banners lack impact and the image is heavily cropped</p>
     </div>
   </div>
 
-  <div class="container">
-    <p>This example shows that without any spacing and very little content
-      banners lack impact and the image is heavily cropped</p>
-  </div>
-
-  <div class="banner mt-lg">
+  <div class="full-page">
+    <div class="banner mt-lg">
+      <div class="container">
+        <div class="banner-content banner-content-1">
+          <h1>This is another attempt</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, placeat iure. Voluptas dolores tenetur ad consectetur maiores! Commodi quam ipsum deleniti nam nihil alias laborum? Corporis expedita tenetur adipisci ipsum.</p>
+        </div>
+      </div>
+    </div>
     <div class="container">
-      <div class="banner-content banner-content-1">
-        <h1>This is another attempt</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, placeat iure. Voluptas dolores tenetur ad consectetur maiores! Commodi quam ipsum deleniti nam nihil alias laborum? Corporis expedita tenetur adipisci ipsum.</p>
-      </div>
+      <p>More content and padding give us a bit more impact but the background is
+        still heavily cropped.
+      </p>
     </div>
   </div>
-
-  <div class="container">
-    <p>More content and padding give us a bit more impact but the background is
-      still heavily cropped.
-    </p>
-  </div>
-
-  <div class="banner mt-lg ratio_16x9">
+  <div class="full-page">
+    <div class="banner mt-lg ratio_16x9">
+      <div class="container">
+        <div class="banner-content banner-content-1">
+          <h1>Fixed Aspect Ratio(16:9)</h1>
+          <p>We can fix the aspect ratio but this can be problematic for both
+            large and small viewports.
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
+        </div>
+      </div>
+    </div>
+  
     <div class="container">
-      <div class="banner-content banner-content-1">
-        <h1>Fixed Aspect Ratio(16:9)</h1>
-        <p>We can fix the aspect ratio but this can be problematic for both
-          large and small viewports.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
-      </div>
+      <p>Fixing an aspect ratio can help to display more of the image but it will
+        start to dominate the viewport on screens that closely match that aspect
+        ratio (this can be particularly bad on large screens).
+      </p>
+      <p></p>
     </div>
   </div>
 
-  <div class="container">
-    <p>Fixing an aspect ratio can help to display more of the image but it will
-      start to dominate the viewport on screens that closely match that aspect
-      ratio (this can be particularly bad on large screens).
-    </p>
-    <p></p>
-  </div>
-
-  <div class="banner mt-lg ratio_21x9">
+  <div class="full-page">
+    <div class="banner mt-lg ratio_21x9">
+      <div class="container">
+        <div class="banner-content banner-content-1">
+          <h1>Fixed Aspect Ratio (21:9)</h1>
+          <p>We can fix the aspect ratio but this can be problematic for both
+            large and small viewports.
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
+        </div>
+      </div>
+    </div>
+  
     <div class="container">
-      <div class="banner-content banner-content-1">
-        <h1>Fixed Aspect Ratio (21:9)</h1>
-        <p>We can fix the aspect ratio but this can be problematic for both
-          large and small viewports.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
-      </div>
+      <p>Fixing an aspect ratio can help to display more of the image but it will
+        start to dominate the viewport on screens that closely match that aspect
+        ratio (this can be particularly bad on large screens).
+      </p>
     </div>
   </div>
 
-  <div class="container">
-    <p>Fixing an aspect ratio can help to display more of the image but it will
-      start to dominate the viewport on screens that closely match that aspect
-      ratio (this can be particularly bad on large screens).
-    </p>
-  </div>
-
-  <div class="banner mt-lg ratio_21x9">
-    <div class="container flex-container">
-      <div class="banner-content banner-content-2">
-        <h2>Minimal Content (21:9)</h2>
+  <div class="full-page">
+    <div class="banner mt-lg ratio_21x9">
+      <div class="container flex-container">
+        <div class="banner-content banner-content-2">
+          <h2>Minimal Content (21:9)</h2>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="container">
-    <p>Fixing an aspect ratio can help to display more of the image but it will
-      start to dominate the viewport on screens that closely match that aspect
-      ratio (this can be particularly bad on large screens).
-    </p>
-  </div>
-
-  <div class="banner mt-lg fixed-height">
+  
     <div class="container">
-      <div class="banner-content banner-content-1">
-        <h1>Fixed Height</h1>
-        <p>Fixing a height can help to give more impact and provide some more
-          consistency.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum, at natus molestias dolores autem consectetur tenetur quam soluta et, quo dolor aliquid aliquam veniam iure veritatis minus, provident blanditiis.</p>
-
-      </div>
+      <p>Fixing an aspect ratio can help to display more of the image but it will
+        start to dominate the viewport on screens that closely match that aspect
+        ratio (this can be particularly bad on large screens).
+      </p>
     </div>
   </div>
 
-  <div class="container">
-    <p>Fixing a height can a useful but we should allow the box to grow when it
-      needs to.
-    </p>
-  </div>
-
-  <div class="banner banner-responsive mt-lg">
+  <div class="full-page">
+    <div class="banner mt-lg fixed-height">
+      <div class="container">
+        <div class="banner-content banner-content-1">
+          <h1>Fixed Height</h1>
+          <p>Fixing a height can help to give more impact and provide some more
+            consistency.
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum, at natus molestias dolores autem consectetur tenetur quam soluta et, quo dolor aliquid aliquam veniam iure veritatis minus, provident blanditiis.</p>
+  
+        </div>
+      </div>
+    </div>
+  
     <div class="container">
-      <div class="banner-content banner-content-responsive">
-        <h1>Using media queries</h1>
-        <p>We can use media queries so that we could have a fixed aspect ratio
-          on smaller screens and force a min-height on larger screens.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
-        
-      </div>
+      <p>Fixing a height can a useful but we should allow the box to grow when it
+        needs to.
+      </p>
     </div>
   </div>
 
-  <div class="container">
-    <p>Fixing a height can a useful but we should allow the box to grow when it
-      needs to.
-    </p>
+  <div class="full-page">
+    <div class="banner banner-responsive mt-lg">
+      <div class="container">
+        <div class="banner-content banner-content-responsive">
+          <h1>Using media queries</h1>
+          <p>We can use media queries so that we could have a fixed aspect ratio
+            on smaller screens and force a min-height on larger screens.
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit distinctio, expedita debitis placeat id, quidem eum modi nostrum iusto facilis dolorum quia incidunt optio perspiciatis, tempore sed? Eligendi, distinctio ab.</p>
+
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+      <p>Fixing a height can a useful but we should allow the box to grow when it
+        needs to.
+      </p>
+      <p>Using media queries we can mix and match some of the different techniques
+        to try and give us a good display at different screen sizes.</p>
+    </div>
   </div>
 
   <a href="../../index.html" class="btn btn-home">Home</a>

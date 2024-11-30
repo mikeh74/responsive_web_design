@@ -11,7 +11,7 @@
 
     .container-md {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 1rem;
     }
 
     /** scroll snap based on .full-page elements */
@@ -56,13 +56,23 @@
 
     .flex-grid {
       display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
       list-style: none;
     }
 
     .flex-grid-item {
-      flex: 1 1 50%;
+      flex: 1 1 45%;
     }
+
+    /* .row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .col-6 {
+      flex: 1 1 48%;
+    } */
 
   </style>
 
@@ -74,7 +84,7 @@
       <div>
         <h1>Images</h1>
         <h2>Default display</h2>
-        <figure>
+        <figure class="border">
           <img src="../images/IMG_1_md.jpg" alt="">
           <figcaption>By default an image will take up the size of the image in pixles on the 
             screen, in this instance the image is 554px x 416px, the space available
@@ -88,10 +98,30 @@
     <div class="container">
       <div>
         <h2>Responsive Display</h2>
-        <figure>
+        <figure class="border">
           <img class="img-fluid" src="../images/IMG_1_md.jpg" alt="">
           <figcaption>Forced max-width: 100% and height:auto</figcaption>
         </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container">
+      <div>
+        <h2>Responsive Display - 2 Columns with text</h2>
+        <div class="flex-grid">
+          <div class="flex-grid-item">
+            <img class="img-fluid w-100" src="../images/IMG_1_md.jpg" alt="">
+          </div>
+          <div class="flex-grid-item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam qui rerum vitae alias labore nemo excepturi aut nisi mollitia dolorem amet, quia ut impedit quisquam placeat animi! Corrupti, voluptatibus eligendi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis, corrupti ad molestias maiores aut illum ipsa porro earum, quo harum beatae nihil? Qui ipsa voluptate iusto iure eius unde!</p>
+            <p>Deleniti suscipit impedit ratione vel quasi fugit dolorem nostrum saepe illo blanditiis id nulla asperiores odit, voluptate possimus praesentium eum provident! Assumenda qui delectus deleniti quidem, placeat minima similique voluptatem.</p>
+            <p>Ipsa minus reiciendis atque exercitationem sint earum porro in saepe quas quibusdam soluta dolorem blanditiis, excepturi asperiores praesentium perferendis non tempora numquam provident magni distinctio illum libero neque odio. Sit?</p>
+            <p>Quia deleniti veniam dolorum sit dicta porro laboriosam rem ipsa ex? Quos reiciendis eos, nulla fugit quibusdam ut nesciunt praesentium quaerat sunt odio quis cumque? Quam assumenda molestias quis consectetur?</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -104,7 +134,7 @@
           continue to grow past it's normal dimensions to fill whatever space
           is available.
         </p>
-        <figure>
+        <figure class="border">
           <img class="img-fluid w-100" src="../images/IMG_1_md.jpg" alt="">
         </figure>
       </div>
@@ -142,6 +172,20 @@
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container">
+      <h2>Summary</h2>
+      <ul class="list-block">
+        <li class="list-block-item">By default images are not responsive in web browsers</li>
+        <li class="list-block-item">The image should be larger than the space that it is intended to fill on the screen</li>
+        <li class="list-block-item">Consider the likely maximum size of the display, it can be hard to provide standard guidance on this, this is the nature of responsive design</li>
+        <li class="list-block-item">Aim for an aspect ratio that the image is inteded to be displayed at, but bear in mind that aspect ratio could change</li>
+        <li class="list-block-item">Because images generatlly keep their aspect ratio fixed content displayed alongside them should be carefully considered</li>
+        <li class="list-block-item">Media queries can be used to stop images from scaling up too large but if they are used then it is up to the designer to decide how that should work</li>
+      </ul>
     </div>
   </div>
 
