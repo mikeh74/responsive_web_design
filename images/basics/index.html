@@ -65,6 +65,14 @@
       flex: 1 1 45%;
     }
 
+    .chevron {
+      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    }
+
+    .circle {
+      clip-path: circle(45%);
+    }
+
     /* .row {
       display: flex;
       gap: 1rem;
@@ -170,6 +178,31 @@
           <li class="flex-grid-item">
             <p>1 x 1</p>
             <div class="ratio_1x1">
+              <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="container-md">
+      <div>
+        <h2>Clip paths</h2>
+        <p>Clip paths are another option to decorate images and make then display
+          in a svg shape.
+        </p>
+        <ul class="flex-grid">
+          <li class="flex-grid-item">
+            <p>1 x 1 with clip path</p>
+            <div class="ratio_1x1 chevron">
+              <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
+            </div>
+          </li>
+          <li class="flex-grid-item">
+            <p>1 x 1 with clip path</p>
+            <div class="ratio_1x1 circle">
               <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
             </div>
           </li>

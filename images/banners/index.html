@@ -11,13 +11,42 @@
   <style>
     .full-page {
       display: block;
+      place-items: normal;
     }
 
     .banner {
-      background-image: url(../images/IMG_1_lg.jpg);
+      background-image: url(../images/banner.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      position: relative;
+    }
+
+    .banner-alt {
+      background-image: url(../images/IMG_5919_lg.jpg);
+    }
+
+    .banner-alt2 {
+      background-image: url(../images/tp_banner.jpg), url(../images/tp_banner2.webp);
+      background-position: 150vw,center !important;
+    }
+
+    .banner-alt2-wrapper::before{
+      display: block;
+      content: "";
+      inset: 0;
+      background: linear-gradient(rgba(37, 65, 86, 0.8), rgba(19, 92, 131, 0.8));
+      position: absolute;
+    }
+
+    @media (min-width: 600px) {
+      .banner-alt2 {
+        background-position: center,center !important;
+      }
+
+      .banner-alt2-wrapper::before{
+        display: none;
+      }
     }
 
     .banner-content {
@@ -37,6 +66,18 @@
       width: 80%;
     }
 
+    .banner-content-3 {
+      /* width: 50%;
+      left: 50%; */
+      text-align: center;
+    }
+
+    .banner-alt2 .banner-content {
+      color: #fff;
+      background-color: transparent;
+    }
+
+
     h1,
     h2,
     p {
@@ -55,6 +96,10 @@
       aspect-ratio: 21/9;
     }
 
+    .ratio_4x1 {
+      aspect-ratio: 4/1;
+    }
+    
     .fixed-height {
       height: 400px;
     }
@@ -64,6 +109,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
+      margin: auto;
     }
 
     .banner-content-responsive {
@@ -72,6 +118,7 @@
     }
 
     .banner-responsive {
+      background-image: url(../images/IMG_5919_lg.jpg);
       aspect-ratio: 21/9;
     }
 
@@ -121,12 +168,13 @@
     </div>
     <div class="container">
       <p>More content and padding give us a bit more impact but the background is
-        still heavily cropped.
+        still heavily cropped, and the more the viewport is scaled the worse
+        the cropping will get.
       </p>
     </div>
   </div>
   <div class="full-page">
-    <div class="banner mt-lg ratio_16x9">
+    <div class="banner banner-alt mt-lg ratio_16x9">
       <div class="container">
         <div class="banner-content banner-content-1">
           <h1>Fixed Aspect Ratio(16:9)</h1>
@@ -150,7 +198,7 @@
   </div>
 
   <div class="full-page">
-    <div class="banner mt-lg ratio_21x9">
+    <div class="banner banner-alt mt-lg ratio_21x9">
       <div class="container">
         <div class="banner-content banner-content-1">
           <h1>Fixed Aspect Ratio (21:9)</h1>
@@ -173,18 +221,16 @@
   </div>
 
   <div class="full-page">
-    <div class="banner mt-lg ratio_21x9">
+    <div class="banner mt-lg ratio_4x1">
       <div class="container flex-container">
-        <div class="banner-content banner-content-2">
-          <h2>Minimal Content (21:9)</h2>
+        <div class="banner-content banner-content-3">
+          <h2>Minimal Content (4:1)</h2>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <p>Fixing an aspect ratio can help to display more of the image but it will
-        start to dominate the viewport on screens that closely match that aspect
-        ratio (this can be particularly bad on large screens).
+      <p>A slender fixed aspect ratio can work well but can't contain much content on a small display
       </p>
     </div>
   </div>
@@ -211,6 +257,26 @@
     <div class="container">
       <p>Fixing a height can a useful but we should allow the box to grow when it
         needs to.
+      </p>
+    </div>
+  </div>
+
+  <div class="full-page">
+    <div class="banner banner-alt2 mt-lg fixed-height">
+      <div class="banner-alt2-wrapper">
+        <div class="container">
+          <div class="banner-content banner-content-1">
+            <h1>Switch out for mobile</h1>
+            <p>This is a pattern that we are looking to adopt across more of our
+              sites to reduce issues around image focus moving out of the viewport.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>This example is using a fixed height but we could use an aspect ratio.
       </p>
     </div>
   </div>
