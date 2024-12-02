@@ -85,10 +85,10 @@
         <h1>Images</h1>
         <h2>Default display</h2>
         <figure class="border">
-          <img src="../images/IMG_1_md.jpg" alt="">
-          <figcaption>By default an image will take up the size of the image in pixles on the 
-            screen, in this instance the image is 554px x 416px, the space available
-            to it is larger but the image won't increase in size by default.</figcaption>
+          <img src="../images/IMG_5919_md.jpg" alt="">
+          <figcaption>By default an image will take up the size of the image in pixels on the
+            screen, in this instance the image is <strong>500px x 375px</strong>, the space available
+            to it is larger but the image won't increase in size by default (and it won't shrink on smaller screens).</figcaption>
         </figure>
       </div>
     </div>
@@ -99,8 +99,8 @@
       <div>
         <h2>Responsive Display</h2>
         <figure class="border">
-          <img class="img-fluid" src="../images/IMG_1_md.jpg" alt="">
-          <figcaption>Forced max-width: 100% and height:auto</figcaption>
+          <img class="img-fluid" src="../images/IMG_5919_md.jpg" alt="">
+          <figcaption>CSS set to max-width: 100% and height:auto</figcaption>
         </figure>
       </div>
     </div>
@@ -112,7 +112,7 @@
         <h2>Responsive Display - 2 Columns with text</h2>
         <div class="flex-grid">
           <div class="flex-grid-item">
-            <img class="img-fluid w-100" src="../images/IMG_1_md.jpg" alt="">
+            <img class="img-fluid w-100" src="../images/IMG_5919_md.jpg" alt="">
           </div>
           <div class="flex-grid-item">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam qui rerum vitae alias labore nemo excepturi aut nisi mollitia dolorem amet, quia ut impedit quisquam placeat animi! Corrupti, voluptatibus eligendi?</p>
@@ -135,7 +135,7 @@
           is available.
         </p>
         <figure class="border">
-          <img class="img-fluid w-100" src="../images/IMG_1_md.jpg" alt="">
+          <img class="img-fluid w-100" src="../images/IMG_5919_md.jpg" alt="">
         </figure>
       </div>
     </div>
@@ -145,29 +145,32 @@
     <div class="container-md">
       <div>
         <h2>Aspect Ratios</h2>
+        <p>Aspect ratios in CSS are relatively new and only supported by
+          <a href="https://caniuse.com/mdn-css_properties_aspect-ratio">~95%</a>
+            of users browsers</p>
         <ul class="flex-grid">
           <li class="flex-grid-item">
             <p>16 x 9</p>
             <div class="ratio_16x9">
-              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+              <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
             </div>
           </li>
           <li class="flex-grid-item">
             <p>3 x 2</p>
             <div class="ratio_3x2">
-              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+              <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
             </div>
           </li>
           <li class="flex-grid-item">
             <p>5 x 4</p>
             <div class="ratio_5x4">
-              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+              <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
             </div>
           </li>
           <li class="flex-grid-item">
             <p>1 x 1</p>
             <div class="ratio_1x1">
-              <img class="img-fit" src="../images/IMG_1_md.jpg" alt="">
+              <img class="img-fit" src="../images/IMG_5919_md.jpg" alt="">
             </div>
           </li>
         </ul>
@@ -184,7 +187,7 @@
         <li class="list-block-item">Consider the likely maximum size of the display, it can be hard to provide standard guidance on this, this is the nature of responsive design</li>
         <li class="list-block-item">Aim for an aspect ratio that the image is inteded to be displayed at, but bear in mind that aspect ratio could change</li>
         <li class="list-block-item">Because images generatlly keep their aspect ratio fixed content displayed alongside them should be carefully considered</li>
-        <li class="list-block-item">Media queries can be used to stop images from scaling up too large but if they are used then it is up to the designer to decide how that should work</li>
+        <li class="list-block-item">Media queries can be used to stop images from scaling up too large but again think about the maximum display</li>
       </ul>
     </div>
   </div>

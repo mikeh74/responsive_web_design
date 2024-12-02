@@ -17,16 +17,28 @@
 
     .link-item {
       flex: 1 1 30%;
-      display: flex;
+      /* display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center; */
       background-color: rgb(233, 233, 233);
       min-height: 5rem;
     }
+
+    .link-item a {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .link-item a:hover, .link-item a:focus-visible {
+      background-color: rgba(0,0,0, 0.2);
+    }
+
   </style>
 
 </head>
-
 <body>
 
   <div class="container">
